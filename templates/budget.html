@@ -1,0 +1,23 @@
+{% extends "basic.html" %}
+
+{% block title %}Budget{% endblock %}
+
+{% block content %}
+<h1>MONTHLY BUDGET</h1>
+<div>
+    <div name="budget_amount" class="Summary_cards">Budget:</div>
+    <div name="Spent" class="Summary_cards">Spent:</div>
+    <div name="Remaining" class="Summary_cards">Remaining:</div>
+</div>
+<div>
+    <!-- Status Msg-->
+</div>
+<div>
+    <h3>Set/Update Budget:-</h3>
+    <form action="/budget" method="POST">
+        <label for="new_budget">Budget:</label>
+        <input type="number" name="new_budget" id="new_budget" placeholder="Enter your monthly budget"><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

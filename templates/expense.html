@@ -25,22 +25,30 @@
 </div>
 <div>
     <table>
-        <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Date</th>
-            <th>Amount</th>
-            <th>Action</th>
-        </tr>
-        {% for expense in expenses %}
-        <tr>{{expense.name}}</tr>
-        <tr>{{expense.category}}</tr>
-        <tr>{{expense.date}}</tr>
-        <tr>{{expense.amount}}</tr>
-        <tr>
-            <a href="/edit">Edit</a>
-            <a href="/delete">Delete</a>
-        </tr>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for expense in expenses %}
+            <tr>
+                <td>{{expense.name}}</td>
+                <td>{{expense.category}}</td>
+                <td>{{expense.date}}</td>
+                <td>{{expense.amount}}</td>
+                <td>
+                    <a href="">Edit</a>
+                    <a href="">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
 </div>
 {% endblock %}

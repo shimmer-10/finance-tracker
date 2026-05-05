@@ -4,9 +4,10 @@
 
 {% block content %}
 <form method="POST" action="/add?source={{source}}">
-    <label for="expense_name">Expense Name:</label>
-    <input type="text" placeholder="Enter Expense Name" required><br>
+    <label for="name">Expense Name:</label>
+    <input type="text" name="name" placeholder="Enter Expense Name" required><br>
 
+    <label for="category">Category:</label>
     <select name="category" id="category" aria-placeholder="Select Category" required>
         <option value="Food">Food</option>
         <option value="Travel">Travel</option>
