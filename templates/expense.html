@@ -1,0 +1,46 @@
+{% extends "basic.html" %}
+
+{% block title %}Expense{% endblock %}
+
+{% block content %}
+<div id="Expense_heading">
+    <h1>ALL EXPENSES</h1>
+    <h2>Track and Manage your spending</h2>
+</div>
+<div>
+    <h5>Total Spend:</h5>
+</div>
+<div>
+    <a href="/add">Add Expense</a>
+    <label for="filter">filter</label>
+    <select name="filter" id="filter">
+        <option value="All">All Expenses</option>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Education">Education</option>
+        <option value="Medical">Medical</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Other">Other</option>
+    </select>
+</div>
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Action</th>
+        </tr>
+        {% for expense in expenses %}
+        <tr>{{expense.name}}</tr>
+        <tr>{{expense.category}}</tr>
+        <tr>{{expense.date}}</tr>
+        <tr>{{expense.amount}}</tr>
+        <tr>
+            <a href="/edit">Edit</a>
+            <a href="/delete">Delete</a>
+        </tr>
+    </table>
+</div>
+{% endblock %}
