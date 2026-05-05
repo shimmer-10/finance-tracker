@@ -1,0 +1,20 @@
+{% extends "basic.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div id="row1">
+    <div class="SummaryCards" name="totalspending"><h5>Total Spending</h5></div>
+    <div class="SummaryCards" name="budget"><h5>Budget</h5></div>
+    <div class="SummaryCards" name="remaining"><h5>Remaining</h5></div>
+    <div class="SummaryCards" name="%used"><h5>Percentage Used</h5></div>
+</div>
+<div id="row2">
+    <h2>Alert:-</h2>
+</div>
+<div id="row3">
+    <h2>Top Categories</h2>
+    <ul></ul>
+</div>
+<div id="row4"><h2>Recent Expenses</h2></div>
+{% endblock %}

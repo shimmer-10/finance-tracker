@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Finance Tracker{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="nav_title" class="navbar"><h1>Finance Tracker</h1></div>
+            <div class="navbar">
+                <a href="">Dashboard</a>                
+                <a href="">Expense</a>                
+                <a href="">Add Expence</a>                
+                <a href="">Budget</a>                
+                <a href="">Insights</a>                
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content%}{% endblock %}
+    </main>
+
+    <footer>
+    </footer>
+        
+</body>
+</html>
