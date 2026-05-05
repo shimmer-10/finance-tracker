@@ -16,5 +16,30 @@
     <h2>Top Categories</h2>
     <ul></ul>
 </div>
-<div id="row4"><h2>Recent Expenses</h2></div>
+<div id="row4">
+    <h2>Recent Expenses:</h2>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+
+            <tbody>
+               {% for exp in recent_expenses %}
+                <tr>
+                    <td>{{exp.name}}</td>
+                    <td>{{exp.category}}</td>
+                    <td>{{exp.date}}</td>
+                    <td>{{exp.amount}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}

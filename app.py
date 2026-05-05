@@ -2,9 +2,11 @@ from flask import Flask,request,render_template,redirect,url_for
 
 app=Flask(__name__)
 expenses=[]
+
 @app.route("/", methods=["GET","POST"])
 def dashboard():
-    return render_template("dashboard.html",expenses=expenses)
+    recent_expenses=expenses[-5:][::-1]
+    return render_template("dashboard.html",recent_expenses=recent_expenses)
 
 @app.route("/expense" , methods=["GET","POST"])
 def expense():
