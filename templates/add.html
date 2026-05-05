@@ -3,9 +3,34 @@
 {% block title %}Add Expense{% endblock %}
 
 {% block content %}
-<form method="POST" action="/add">
+<form method="POST" action="/add?source={{source}}">
     <label for="expense_name">Expense Name:</label>
-    <input type="text" placeholder="Enter Expense Name">
+    <input type="text" placeholder="Enter Expense Name" required><br>
+
+    <select name="category" id="category" aria-placeholder="Select Category" required>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Education">Education</option>
+        <option value="Medical">Medical</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <label for="amount">Amount:</label>
+    <input type="number" name="amount" placeholder="Enter Amount" required><br>
+
+    <label for="date">Date:</label>
+    <input type="date" name="date" placeholder="YYYY-MM-DD" required><br>
+
+    <div>
+        <button type="submit">Add Expence</button>
+        {% if source=="expense" %}
+        <div><a href="/expense">Cancel</a></div>
+        {% else %}
+        <div><a href="/">Cancel</a></div>
+        {% endif %}
+    </div>
+
 
 </form>
 {% endblock %}
