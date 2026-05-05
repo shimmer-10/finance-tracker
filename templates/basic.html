@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Finance Tracker{% endblock %}</title>
+    <link rel="stylesheet" href="/static/basic.css">
+    
 </head>
 <body>
     <header>
         <nav>
             <div id="nav_title" class="navbar"><h1>Finance Tracker</h1></div>
-            <div class="navbar">
+            <div class="navbar" id="navbar_links">
                 <a href="{{url_for('dashboard')}}">Dashboard</a>                
                 <a href="{{url_for('expense')}}">Expense</a>                
-                <a href="{{url_for('add')}}">Add Expence</a>                
+                <a href="{{url_for('add')}}">Add Expense</a>                
                 <a href="{{url_for('budget')}}">Budget</a>                
                 <a href="">Insights</a>                
 

@@ -1,0 +1,160 @@
+
+main{
+    max-width:1020px;
+    margin:auto;
+    padding:20px 14px;
+}
+
+#row1{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin-bottom:16px;
+}
+.SummaryCards{
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #f7faff
+    );
+
+    border-radius:22px;
+    padding:18px;
+    min-height:140px;
+    box-shadow:
+    0 6px 18px rgba(36,59,83,0.08);
+    transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.SummaryCards:hover{
+    transform:
+    translateY(-5px)
+    scale(1.02);
+    box-shadow:
+    0 16px 32px rgba(36,59,83,0.14);
+}
+
+.SummaryCards:nth-child(1){
+    border-top:4px solid #3b82f6;
+}
+
+.SummaryCards:nth-child(2){
+    border-top:4px solid #8b5cf6;
+}
+
+.SummaryCards:nth-child(3){
+    border-top:4px solid #10b981;
+}
+
+.SummaryCards:nth-child(4){
+    border-top:4px solid #f59e0b;
+}
+
+.SummaryCards h5{
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+    color:#3d5266;
+    margin-bottom:12px;
+}
+
+#row2{
+    background:
+    linear-gradient(
+        145deg,
+        #fff7ed,
+        #fffbf5
+    );
+    border-left:5px solid #f59e0b;
+    border-radius:22px;
+    padding:18px 22px;
+    margin-bottom:16px;
+    box-shadow:
+    0 6px 18px rgba(36,59,83,0.05);
+}
+
+#row2 h2{
+    font-size:16px;
+    font-weight:700;
+    color:#92400e;
+}
+
+#row3{
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #f9fbff
+    );
+    border-radius:22px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow:
+    0 6px 18px rgba(36,59,83,0.06);
+}
+
+#row3 h2{
+    font-size:17px;
+    font-weight:700;
+    color:#243b53;
+    margin-bottom:16px;
+}
+
+#row4{
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #f9fbff
+    );
+    border-radius:22px;
+    padding:22px;
+    box-shadow:
+    0 6px 18px rgba(36,59,83,0.06);
+}
+
+#row4 h2{
+    font-size:17px;
+    font-weight:700;
+    color:#243b53;
+    margin-bottom:18px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background-color:#cdd4db;
+}
+
+thead th{
+    text-align:left;
+    padding:14px 12px;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.9px;
+    color:#636e7a;
+}
+
+tbody td{
+    padding:16px 12px;
+    font-size:14px;
+    font-weight:500;
+    color:#334e68;
+    border-top:1px solid #e2e8f0;
+}
+
+tbody tr{
+    transition:0.2s ease;
+}
+
+tbody tr:hover{
+    background:#d9e0e9;
+}
