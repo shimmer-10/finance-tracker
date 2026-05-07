@@ -3,6 +3,7 @@
 {% block title %}Expense{% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="/static/expense.css">
 <div id="Expense_heading">
     <h1>ALL EXPENSES</h1>
     <h2>Track and Manage your spending</h2>
@@ -10,18 +11,20 @@
 <div>
     <h5>Total Spend:</h5>
 </div>
-<div>
-    <a href="/add?source=expense">Add Expense</a>
-    <label for="filter">filter</label>
-    <select name="filter" id="filter">
-        <option value="All">All Expenses</option>
-        <option value="Food">Food</option>
-        <option value="Travel">Travel</option>
-        <option value="Education">Education</option>
-        <option value="Medical">Medical</option>
-        <option value="Shopping">Shopping</option>
-        <option value="Other">Other</option>
-    </select>
+<div class="controls">
+    <a href="/add?source=expense">+ Add Expense</a>
+    <div class="filter-box">
+        <label for="filter">Filter:</label>
+        <select name="filter" id="filter">
+            <option value="All">All Expenses</option>
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Education">Education</option>
+            <option value="Medical">Medical</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
 </div>
 <div>
     <table>

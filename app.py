@@ -1,4 +1,4 @@
-from flask import Flask,request,render_template,redirect,url_for
+from flask import Flask,request,render_template,redirect,url_for,session
 
 app=Flask(__name__)
 expenses=[]
@@ -35,9 +35,11 @@ def add():
 def budget():
     if request.method=="POST":
         budget_amount=request.form.get("budget_amount")
+        budget_amount=int(budget_amount)
+        session["budget_amount"]=budget_amount
         return redirect(url_for("budget"))
     
-    return render_template("budget.html")
+    return render_template("budget.html" , budget_amount=budget_amount)
 
 if __name__=="__main__":
     app.run(debug=True)
